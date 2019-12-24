@@ -18,5 +18,10 @@ public class CalculatorConsumerController {
         Random random = new Random();
         return calculatorConsumerService.add(random.nextInt(),random.nextInt());
     }
+	
+	@GetMapping("/")
+	public String getHealth() {
+		return "application is up and running";
+	}
 
 }
