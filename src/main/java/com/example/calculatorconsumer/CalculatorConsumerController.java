@@ -19,6 +19,13 @@ public class CalculatorConsumerController {
         return calculatorConsumerService.add(random.nextInt(),random.nextInt());
     }
 	
+	@GetMapping("/randomsub")
+    public String randomSub() {
+        System.out.println("Calling Calculator Service: simplecalculator");
+        Random random = new Random();
+        return calculatorConsumerService.sub(random.nextInt(),random.nextInt());
+    }
+	
 	@GetMapping("/")
 	public String getHealth() {
 		return "application is up and running";
